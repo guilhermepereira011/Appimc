@@ -53,6 +53,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(654, 114);
@@ -73,6 +74,7 @@
             // 
             // Kg
             // 
+            Kg.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Kg.AutoSize = true;
             Kg.Font = new Font("Segoe UI", 12F);
             Kg.Location = new Point(654, 227);
@@ -83,8 +85,9 @@
             // 
             // btCalcular
             // 
+            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btCalcular.Font = new Font("Segoe UI", 12F);
-            btCalcular.Location = new Point(236, 282);
+            btCalcular.Location = new Point(243, 286);
             btCalcular.Margin = new Padding(3, 4, 3, 4);
             btCalcular.Name = "btCalcular";
             btCalcular.Size = new Size(466, 70);
@@ -99,21 +102,24 @@
             lblImc.Font = new Font("Segoe UI", 12F);
             lblImc.Location = new Point(236, 414);
             lblImc.Name = "lblImc";
-            lblImc.Size = new Size(0, 21);
+            lblImc.Size = new Size(38, 21);
             lblImc.TabIndex = 5;
-            lblImc.Click += lblImc_Click;
+            lblImc.Text = "IMC";
             // 
             // lblClassif
             // 
+            lblClassif.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblClassif.AutoSize = true;
             lblClassif.Font = new Font("Segoe UI", 12F);
             lblClassif.Location = new Point(236, 496);
             lblClassif.Name = "lblClassif";
-            lblClassif.Size = new Size(0, 21);
+            lblClassif.Size = new Size(106, 21);
             lblClassif.TabIndex = 6;
+            lblClassif.Text = "Buraco Negro";
             // 
             // numAltura
             // 
+            numAltura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             numAltura.DecimalPlaces = 2;
             numAltura.Font = new Font("Segoe UI", 12F);
             numAltura.Location = new Point(294, 112);
@@ -125,6 +131,7 @@
             // 
             // numPeso
             // 
+            numPeso.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             numPeso.DecimalPlaces = 2;
             numPeso.Font = new Font("Segoe UI", 12F);
             numPeso.Location = new Point(294, 225);
@@ -148,10 +155,10 @@
             Controls.Add(label2);
             Controls.Add(Altura);
             Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "CalculadoraDeImc";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numAltura).EndInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).EndInit();
             ResumeLayout(false);

@@ -32,25 +32,25 @@ namespace Appimc
                 return "obesidade I";
             if (imc < 40)
                 return "obesidade II";
-            return "Obesidade Mórbia";
+            return "Obesidade Mórbida";
 
         }
         private void numAltura_ValueChanged(object sender, EventArgs e)
         {
             decimal a = numAltura.Value;
-            /*if (!(a == 0))//true
-                btCalcular.Enabled = true;
-            else//false
-                btCalcular.Enabled = false;*/
+            //if (!(a == 0))//true
+            //btCalcular.Enabled = true;
+            //else//false
+            //btCalcular.Enabled = false;
             btCalcular.Enabled = (a != 0);
         }
 
-        private void lblImc_Click(object sender, EventArgs e)
+        private void lblClassif_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblClassif_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
