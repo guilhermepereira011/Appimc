@@ -1,3 +1,5 @@
+using System.Diagnostics.Eventing.Reader;
+
 namespace Appimc
 {
     public partial class Form1 : Form
@@ -52,7 +54,19 @@ namespace Appimc
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Bem-vindo à Calculadora de IMC");
+        }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Deseja realmente sair?", "Calculadora de IMC", MessageBoxButtons.YesNo);
+            if (r == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Tchau!");
         }
     }
 }

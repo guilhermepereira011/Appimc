@@ -85,7 +85,7 @@
             // 
             // btCalcular
             // 
-            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btCalcular.Font = new Font("Segoe UI", 12F);
             btCalcular.Location = new Point(243, 286);
             btCalcular.Margin = new Padding(3, 4, 3, 4);
@@ -98,24 +98,25 @@
             // 
             // lblImc
             // 
-            lblImc.AutoSize = true;
+            lblImc.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblImc.Font = new Font("Segoe UI", 12F);
-            lblImc.Location = new Point(236, 414);
+            lblImc.Location = new Point(12, 406);
             lblImc.Name = "lblImc";
-            lblImc.Size = new Size(38, 21);
+            lblImc.Size = new Size(861, 21);
             lblImc.TabIndex = 5;
             lblImc.Text = "IMC";
+            lblImc.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblClassif
             // 
-            lblClassif.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblClassif.AutoSize = true;
+            lblClassif.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblClassif.Font = new Font("Segoe UI", 12F);
-            lblClassif.Location = new Point(236, 496);
+            lblClassif.Location = new Point(12, 427);
             lblClassif.Name = "lblClassif";
-            lblClassif.Size = new Size(106, 21);
+            lblClassif.Size = new Size(851, 21);
             lblClassif.TabIndex = 6;
             lblClassif.Text = "Buraco Negro";
+            lblClassif.TextAlign = ContentAlignment.TopCenter;
             // 
             // numAltura
             // 
@@ -158,6 +159,8 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "CalculadoraDeImc";
+            FormClosing += Form1_FormClosing;
+            FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numAltura).EndInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).EndInit();
